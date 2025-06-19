@@ -1,38 +1,302 @@
-.App {
+.navbar {
+  padding: 0.3rem 1rem;
+  background:linear-gradient(to right, #0f0f0f, #8a8989, #cccbcb);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 90;
+}
+
+.navbar-logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar-links a {
+  color: rgb(250, 246, 246);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+
+
+.profile-link {
+  font-weight: bold;
+  font-size: 1rem;
+  color: rgb(71, 61, 61);
+  background: rgb(7, 7, 7);
+  padding: 2px 10px;
+  border-radius: 8px;
+}
+
+
+
+.home-container {
+  position: relative;
+  background-image: url('./cric1.jpg'); 
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.home-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* dark overlay */
+  z-index: 0;
+}
+
+.home-header,
+.home-main {
+  position: relative;
+  z-index: 1;
+  font-size: large;
+}
+
+.primary-btn {
+  background-color: rgba(109, 106, 106, 0.979);
+  border: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.primary-btn:hover {
+  background-color: rgb(197, 188, 188);
+}
+
+
+.learn-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.learn-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin: 16px;
+}
+
+.card-description {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0 16px 16px;
+}
+
+.learn-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.learn-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #1a1a1a;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns always */
+  gap: 1.5rem;
+  justify-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+  width: 100%;
+  height: 400px;             
+  object-fit: cover;        
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+
+.card-title {
+  font-size: 1.25rem;
+  margin: 0.75rem 0 0.5rem;
+  color: #222;
+}
+
+.card-description {
+  font-size: 1rem;
+  color: #555;
+  padding: 0 1rem 1rem;
+}
+
+.practice-container {
+  padding: 4rem;
+  max-width: 1000px;
+  margin: auto;
+  background: #fefefe;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.practice-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.input-section {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.input-section input {
+  flex: 1;
+  padding: 0.6rem;
+  font-size: 1rem;
+}
+
+.input-section button {
+  padding: 0.6rem 1rem;
+  background-color: #2980b9;
   color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.practice-list {
+  list-style: none;
+  padding: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.practice-list li {
+  background: #ecf0f1;
+  padding: 0.8rem;
+  border-radius: 8px;
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.practice-list li.done {
+  text-decoration: line-through;
+  background: #c8e6c9;
+}
+
+.practice-list .btns button {
+  margin-left: 0.5rem;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.profile-container {
+  padding: 2rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+.profile-title {
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+}
+
+.profile-card {
+  background: #fefefe;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  line-height: 1.6;
+}
+
+.profile-card p {
+  font-size: 1.1rem;
+  margin: 0.4rem 0;
+}
+
+.progress-bar {
+  margin-top: 1rem;
+  height: 12px;
+  background: #080808;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #4caf50;
 }
