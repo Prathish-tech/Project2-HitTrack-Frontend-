@@ -51,20 +51,19 @@ Update the API base URL in your frontend code (e.g., axios.defaults.baseURL or .
 REACT_APP_API_BASE_URL=http://localhost:8000/api
 ```
 
-## 📁 Folder Structure (Basic)
+## 📁 Folder Structure 
 ```pgsql
 hit-track/
-├── public/
 ├── src/
-│   ├── components/
-│   ├── pages/
-│   ├── services/
-│   ├── App.jsx
-│   └── index.js
-├── .env
+│   ├── components/     # Reusable UI (Navbar, etc.)
+│   ├── pages/          # Page-level views (Login, Practice, Learn, etc.)
+├── public/
+├── App.js
+├── api.js
 ├── .gitignore
+├── package.json
 ├── README.md
-└── package.json
+
 ```
 
 ## 🙌 Author
@@ -74,6 +73,17 @@ Prathish S
 
 ## 📃 License
 This project is licensed under the MIT License.
+```
+---
 
+### ✅ Save and Push to GitHub:
 
+After saving the file, run these commands in your terminal:
+
+```bash
+git add README.md
+git commit -m "Update README for HitTrack frontend"
+git push
+
+```
 
